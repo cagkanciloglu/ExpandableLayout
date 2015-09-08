@@ -41,8 +41,9 @@ expandableLayout.setClosePosition(500);
 
 #### Layout xml
 
-```xml
+add `xmlns:app="http://schemas.android.com/apk/res-auto"`
 
+```xml
 <com.github.aakira.expandablelayout.ExpandableRelativeLayout
     android:id="@+id/expandableLayout"
     android:layout_width="match_parent"
@@ -84,6 +85,8 @@ expandableLayout.collapse();
 ```
 
 #### Layout xml
+
+add `xmlns:app="http://schemas.android.com/apk/res-auto"`
 
 ```xml
 <LinearLayout
@@ -147,11 +150,11 @@ expandableLayout.setListener(new ExpandableLayoutListener() {
 
 ### Attributes
 
-|attr|description|
+|attribute name|description|
 |:-:|:-:|
 |duration|The length of the expand or collapse animation|
 |defaultVisibility|The layout is expanded at first if you set true|
-|orientation|The orientation of animation(HORIZONTAL \| VERTICAL)|
+|orientation|The orientation of animation(horizontal \| vertical)|
 |interpolator|Sets [interpolator](#interpolator)|
 
 ### Interpolator
@@ -159,19 +162,19 @@ expandableLayout.setListener(new ExpandableLayoutListener() {
 You can use [interpolator](http://developer.android.com/reference/android/view/animation/Interpolator.html).
 It helps the layout animates easily.
 
-|Interpolator|
-|:-:|
-|ACCELERATE_DECELERATE_INTERPOLATOR|
-|ACCELERATE_INTERPOLATOR|
-|ANTICIPATE_INTERPOLATOR|
-|ANTICIPATE_OVERSHOOT_INTERPOLATOR|
-|BOUNCE_INTERPOLATOR|
-|DECELERATE_INTERPOLATOR|
-|FAST_OUT_LINEAR_IN_INTERPOLATOR|
-|FAST_OUT_SLOW_IN_INTERPOLATOR|
-|LINEAR_INTERPOLATOR|
-|LINEAR_OUT_SLOW_IN_INTERPOLATOR|
-|OVERSHOOT_INTERPOLATOR|
+|Interpolator|attribute name|
+|:-:|:-:|
+|[AccelerateDecelerateInterpolator](http://developer.android.com/reference/android/view/animation/AccelerateDecelerateInterpolator.html)|accelerateDecelerateInterpolator|
+|[AccelerateInterpolator](http://developer.android.com/reference/android/view/animation/AccelerateInterpolator.html)|accelerateInterpolator|
+|[AnticipateInterpolator](http://developer.android.com/reference/android/view/animation/AnticipateInterpolator.html)|anticipateInterpolator|
+|[AnticipateOvershootInterpolator](http://developer.android.com/reference/android/view/animation/AnticipateOvershootInterpolator.html)|anticipateOvershootInterpolator|
+|[BounceInterpolator](http://developer.android.com/reference/android/view/animation/BounceInterpolator.html)|bounceInterpolator|
+|[DecelerateInterpolator](http://developer.android.com/reference/android/view/animation/DecelerateInterpolator.html)|decelerateInterpolator|
+|[FastOutLinearInInterpolator](http://developer.android.com/reference/android/support/v4/view/animation/FastOutLinearInInterpolator.html)|fastOutLinearInInterpolator|
+|[FastOutSlowInInterpolator](http://developer.android.com/reference/android/support/v4/view/animation/FastOutSlowInInterpolator.html)|fastOutSlowInInterpolator|
+|[LinearInterpolator](http://developer.android.com/reference/android/view/animation/LinearInterpolator.html)|linearInterpolator|
+|[LinearOutSlowInInterpolator](http://developer.android.com/reference/android/support/v4/view/animation/LinearOutSlowInInterpolator.html)|linearOutSlowInInterpolator|
+|[OvershootInterpolator](http://developer.android.com/reference/android/view/animation/OvershootInterpolator.html)|overshootInterpolator|
 
 These are support interpolator.
 But a case that the expandable layout extends outside doesn't work.
